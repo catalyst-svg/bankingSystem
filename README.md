@@ -14,7 +14,7 @@ different languages can work together, while also strengthening my coding and Gi
 ## Requirements
  
 - g++ (C++17 or higher)
-- Python 3.x
+- Python 3.14.0
  
 ## How to Compile
  
