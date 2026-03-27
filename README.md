@@ -38,18 +38,18 @@ make clean
  
 ```
 bankingSys/
-main.cpp
-includes.h
-system.h
-accessControl.h
-crudScript.py
-Makefile
-README.md
-userData//
-employees.csv
-users.csv
+├── main.cpp
+├── includes.h
+├── system.h
+├── accessControl.h
+├── crudScript.py
+├── Makefile
+├── README.md
+├── .gitignore
+└── userData/
+    ├── employees.csv
+    └── users.csv
 ```
- 
 ## How it Works
  
 C++ manages the core logic including transaction processing, balance calculations,
