@@ -7,21 +7,18 @@ class Customer
 
 {
 	std::string m_name;
+	int m_id;
 	std::string m_email;
 	std::string m_pswd;
 	double m_balance;
 public:
-
-	Client();
-	Client(std::string name,std::string email,std::string pswd,double balance);
-
 	Customer(std::string name,int id, std::string email,std::string pswd,double balance);
 
-	double getBalance();
+	int getID() const;
 	std::string getName() const;
 	std::string getEmail() const;
 	std::string getPswd() const;
-	double getBalance() const;
+	double getBalance();
 
 };
 

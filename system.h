@@ -3,20 +3,19 @@
 
 #include "includes.h"
 
-<<<<<<< Updated upstream
 
-=======
 namespace bankingSystem
 {
-	void deposit(Customer& c, double amount);
 
-	void withdraw(Customer& c, double amount);
+	static void deposit(Customer& c, double amount);
 
-	void changePswd(Customer& c, std::string currentPswd);
+	static void withdraw(Customer& c, double amount);
 
-	void changeEmail(Customer& c,std::string currentEmail);
+	static void changePswd(Customer& c, std::string currentPswd);
+
+	static void changeEmail(Customer& c,std::string currentEmail);
 	
 }
->>>>>>> Stashed changes
+
 
 #endif

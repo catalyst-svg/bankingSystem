@@ -13,7 +13,7 @@ std::string Customer::getEmail() const
 {
 	return m_email;
 }
-std::string Customer::getPswd() 
+std::string Customer::getPswd() const 
 {
 	return m_pswd;
 }
@@ -28,9 +28,140 @@ void Employee::deleteAccount(int userID)
 ////
 admin::admin(int id,std::string adminPswd) : m_id(id),m_adminPswd(adminPswd) {}
 
-	 
+////
+void bankingSystem::deposit(Customer& c, double amount)
+{	
+	double bal;
+	bal = c.getBalance();
+	bal += amount;
+	//post with pyhthon script
+}
+void bankingSystem::withdraw(Customer& c,double amount)
+{
+	double bal;
+	if (amount > c.getBalance())
+	{
+		std::cout << "Withdraw Amount Exceeds Account Balance" << std::endl;
+	}
+	else
+	{
+		bal = c.getBalance();
+		bal -= amount;
+		//post with pyhton script//
+	}
+}
+
+void bankingSystem::changePswd(Customer& c,std::string currentPswd)
+{
+	std::string p;
+	p = c.getPswd();
+	std::string newP;
+	std::string confirmPswd;
+	bool pswdMatch{false};
+	if (p == currentPswd)
+	{
+		while (!pswdMatch)
+		{
+			std::cout << "Enter New Password: ";
+			std::getline(std::cin,newP);
+			std::cin.clear();
+			std::cout << "Confirm New Password: ";
+			std::getline(std::cin,confirmPswd);
+			std::cin.clear();
+			if (confirmPswd == newP)
+			{
+				pswdMatch = true;
+			}
+		}
+
+		//update to csv pthon script
+	}
+	else
+	{
+		std::cout << "Current Password Incorrect" << std::endl;
+	}
+
+}
+
+void bankingSystem::changeEmail(Customer& c,std::string currentEmail)
+{
+	std::string e;
+	e = c.getEmail();
+	std::string newEmail;
+	std::string confirmEmail;
+	bool emailsMatch{false};
+	if (currentEmail == e)
+	{
+		while (!emailsMatch)
+		{
+			std::cout << "Enter New Email: ";
+			std::getline(std::cin,newEmail);
+			std::cin.clear();
+			std::cout << "Confirm New Email: ";
+			std::getline(std::cin,confirmEmail);
+			if (confirmEmail == newEmail)
+			{
+				emailsMatch = true;
+			}
+		}
+
+		//update to csv pthon script
+	}
+	else
+	{
+		std::cout << "Email Does Not Exist" << std::endl;
+	}
+
+
+
+}
+
+
+
+
 int main()
 {
+	int userType{};
+	int userChoice{};
+	int userID{};
+
+	std::cout << "    Standard Banking Application" << std::endl;
+	std::cout << "--------------------------------------" << std::endl;
+
+	std::cout << "1. Customer\n2. Employee\n3. Admin\n4. Exit\n>> ";
+	std::cin >> userType;
+	
+	std::cout << "Enter User ID: ";
+	std::cin >> userID;
+
+	while (userType != 4)
+	{
+		switch (userType)
+		{
+			case 1: 
+			{
+				//python script to fetch user data
+				Customer c1();
+			}
+			case 2: 
+			{
+				//employee
+				Employee e1();
+			}
+			case 3:
+			{
+				admin a1();
+				//admin
+			}
+
+			default:
+			{
+				std::cout << "Not A Valid Entry" << std::endl;
+			}
+		}
+	}
+
+
 
 	return 0;
 }
