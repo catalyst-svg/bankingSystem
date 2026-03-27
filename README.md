@@ -37,7 +37,6 @@ make clean
 ## Project Structure
  
 ```
-
 bankingSys/
 main.cpp
 includes.h
@@ -46,8 +45,7 @@ accessControl.h
 crudScript.py
 Makefile
 README.md
-.gitignore
-userData/
+userData//
 employees.csv
 users.csv
 ```
