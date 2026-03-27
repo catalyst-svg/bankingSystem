@@ -37,14 +37,19 @@ make clean
 ## Project Structure
  
 ```
+
 bankingSys/
-├── main.cpp
-├── includes.h
-├── system.h
-├── accessControl.h
-├── crudScript.py
-├── Makefile
-└── README.md
+main.cpp
+includes.h
+system.h
+accessControl.h
+crudScript.py
+Makefile
+README.md
+.gitignore
+userData/
+employees.csv
+users.csv
 ```
  
 ## How it Works
